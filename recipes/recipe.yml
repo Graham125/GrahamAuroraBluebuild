@@ -34,27 +34,29 @@ modules:
       - tailscale
       - kwrite
       - knetattach
-      - input-leap
       - sysprof
       - plasma-systemmonitor
       - starship
       - partitionmanager
+      - input-leap
       
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       # If no repo information is specified, Flathub will be used by default
       install:
-       # - 
+      - app/io.podman_desktop.PodmanDesktop/x86_64/stable
       remove:
-      - io.github.dvlv.boxbuddyrs.desktop
-      - org.fkoehler.KTailctl.desktop
-      - org.gnome.World.PikaBackup.desktop
-      - org.gnome.World.PikaBackup.Monitor.desktop
-      - org.kde.haruna.desktop
-      - org.kde.kontact.desktop
-      - org.mozilla.Thunderbird.desktop
-      - org.mozilla.firefox.desktop
+      - app/io.github.dvlv.boxbuddyrs.desktop
+      - app/org.fkoehler.KTailctl.desktop
+      - app/org.gnome.World.PikaBackup.desktop
+      - app/org.gnome.World.PikaBackup.Monitor.desktop
+      - app/org.kde.haruna.desktop
+      - app/org.kde.kontact.desktop
+      - app/org.mozilla.Thunderbird.desktop
+      - app/org.mozilla.firefox.desktop
+      - app/io.github.input_leap.input-leap/x86_64/stable
+      - app/io.github.pwr_solaar.solaar/x86_64/stable
       
     user: {} # Also add Flathub user repo, but no user packages
 
