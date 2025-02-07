@@ -22,23 +22,40 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
       - https://packages.microsoft.com/keys/microsoft.asc
     install:
-      # - micro
-      # - starship
       - code
-      
+      - kitty
+      - obs
+      - gparted
+      - firefox
     remove:
-      # example: removing firefox (in favor of the flatpak)
-      # "firefox" is the main package, "firefox-langpacks" is a dependency
-      - 
-
+      - ptyxis
+      - konsole
+      - distrobox
+      - tailscale
+      - kwrite
+      - knetattach
+      - input-leap
+      - sysprof
+      - plasma-systemmonitor
+      - starship
+      - partitionmanager
+      
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       # If no repo information is specified, Flathub will be used by default
       install:
-        - 
+       # - 
       remove:
-        - 
+      - io.github.dvlv.boxbuddyrs.desktop
+      - org.fkoehler.KTailctl.desktop
+      - org.gnome.World.PikaBackup.desktop
+      - org.gnome.World.PikaBackup.Monitor.desktop
+      - org.kde.haruna.desktop
+      - org.kde.kontact.desktop
+      - org.mozilla.Thunderbird.desktop
+      - org.mozilla.firefox.desktop
+      
     user: {} # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
