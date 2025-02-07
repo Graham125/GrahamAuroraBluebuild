@@ -6,7 +6,7 @@ name: GrahamAuroraBluebuild
 description: Test of bluebuild, to see if it does what I want, and if atomic distros are for me.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/aurora:stable
+base-image: ghcr.io/ublue-os/aurora
 image-version: 41 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
