@@ -18,9 +18,9 @@ modules:
 
   - type: rpm-ostree
     repos:
-     # - https://packages.microsoft.com/keys/microsoft.asc
+     - https://packages.microsoft.com/keys/microsoft.asc
     install:
-     # - code
+      - code
       - kitty
       - obs
       - gparted
